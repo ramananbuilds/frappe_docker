@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://github.com/ramananbuilds/erpnext",
+    "branch": "studiolite-v16"
+  },
+  {
+    "url": "https://github.com/ramananbuilds/hrms",
+    "branch": "studiolite-v16"
+  },
+  {
+    "url": "https://github.com/ramananbuilds/crm",
+    "branch": "studiolite-v16"
+  },
+  {
+    "url": "https://github.com/ramananbuilds/business-suite-branding",
+    "branch": "main"
+  }
+]
