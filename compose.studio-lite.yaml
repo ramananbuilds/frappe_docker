@@ -61,7 +61,7 @@ services:
       - --skip-character-set-client-handshake
     environment:
       MARIADB_AUTO_UPGRADE: "1"
-      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD:?}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
     healthcheck:
       test:
         - CMD
