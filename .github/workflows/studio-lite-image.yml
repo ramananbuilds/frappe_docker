@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: images/layered/Containerfile
+          file: images/custom/Containerfile
           platforms: linux/amd64
           push: true
           pull: true
