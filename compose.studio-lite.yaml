@@ -102,7 +102,7 @@ services:
       SOCKETIO: websocket:9000
       UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
       UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: 'off'
+      UPSTREAM_REAL_IP_RECURSIVE: "off"
     image: ghcr.io/ramananbuilds/studio-lite:v16
     networks:
       default: null
