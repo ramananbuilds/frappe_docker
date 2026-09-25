@@ -82,6 +82,8 @@ services:
         target: /var/lib/mysql
         volume: {}
   frontend:
+    expose:
+      - "8080"
     command:
       - nginx-entrypoint.sh
     depends_on:
@@ -96,6 +98,7 @@ services:
       CLIENT_MAX_BODY_SIZE: 50m
       FRAPPE_SITE_NAME_HEADER: $$host
       NGINX_LISTEN_PORT: "8080"
+      SERVICE_URL_FRONTEND_8080: /
       PROXY_READ_TIMEOUT: "120"
       SOCKETIO: websocket:9000
       UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
