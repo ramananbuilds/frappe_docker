@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - 'apps.json'
-      - 'images/**'
+      - "apps.json"
+      - "images/**"
 
 permissions:
   contents: read
