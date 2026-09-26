@@ -113,6 +113,34 @@ services:
         source: sites
         target: /home/frappe/frappe-bench/sites
         volume: {}
+  create-site:
+    command:
+      - bash
+      - /home/frappe/frappe-bench/sites/create-site.sh
+    depends_on:
+      configurator:
+        condition: service_completed_successfully
+        required: true
+    entrypoint:
+      - bash
+      - -c
+    environment:
+      DB_ROOT_PASSWORD: "${DB_PASSWORD}"
+      SITE_NAME: "${SITE_NAME:-}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:-}"
+      SITE_ALIASES: "${SITE_ALIASES:-}"
+      APPS_TO_INSTALL: "${APPS_TO_INSTALL:-erpnext hrms crm business_suite_branding}"
+    image: ghcr.io/ramananbuilds/studio-lite:v16
+    networks:
+      default: null
+    platform: linux/amd64
+    pull_policy: always
+    restart: on-failure
+    volumes:
+      - type: volume
+        source: sites
+        target: /home/frappe/frappe-bench/sites
+        volume: {}
   migrator:
     command:
       - |
@@ -125,6 +153,9 @@ services:
         fi; echo "[migrator] Migrating all sites"; bench --site all migrate;
     depends_on:
       configurator:
+        condition: service_completed_successfully
+        required: true
+      create-site:
         condition: service_completed_successfully
         required: true
     entrypoint:
