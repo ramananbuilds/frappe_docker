@@ -46,8 +46,8 @@ jobs:
             ghcr.io/ramananbuilds/studio-lite:${{ github.sha }}
 
           build-args: |
-            FRAPPE_PATH=https://github.com/ramananbuilds/frappe
-            FRAPPE_BRANCH=studiolite-v16
+            FRAPPE_PATH=https://github.com/frappe/frappe
+            FRAPPE_BRANCH=v16.55.2
             CACHE_BUST=${{ github.run_id }}
 
           secret-files: |

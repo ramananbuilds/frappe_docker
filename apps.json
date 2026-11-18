@@ -1,18 +1,30 @@
 [
   {
-    "url": "https://github.com/ramananbuilds/erpnext",
-    "branch": "studiolite-v16"
+    "url": "https://github.com/frappe/erpnext",
+    "branch": "v16.54.0"
   },
   {
-    "url": "https://github.com/ramananbuilds/hrms",
-    "branch": "studiolite-v16"
+    "url": "https://github.com/frappe/hrms",
+    "branch": "v16.53.1"
   },
   {
-    "url": "https://github.com/ramananbuilds/crm",
-    "branch": "studiolite-v16"
+    "url": "https://github.com/frappe/crm",
+    "branch": "v1.92.0"
   },
   {
-    "url": "https://github.com/ramananbuilds/business-suite-branding",
+    "url": "https://github.com/frappe/helpdesk",
+    "branch": "v16.1.0"
+  },
+  {
+    "url": "https://github.com/frappe/telephony",
+    "branch": "develop"
+  },
+  {
+    "url": "https://github.com/whoisshahab/Frappe-White-Label",
+    "branch": "main"
+  },
+  {
+    "url": "https://github.com/ramananbuilds/agency_core",
     "branch": "main"
   }
 ]
